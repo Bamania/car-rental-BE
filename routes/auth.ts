@@ -2,6 +2,7 @@ import express  from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { prisma } from "../lib/db";
+import { authenticate } from "../middleware/authenticate";
 const router=express.Router()
 
 // JWT secret (in production, use environment variable)
@@ -115,10 +116,10 @@ router.post("/logout", (req, res) => {
 
 
 // this route is only to check the login status !
-router.get("/me", (req, res) => {
+router.get("/me", authenticate,(req, res) => {
   const token = req.cookies.authcookie;
   if (token) {
-    res.json({ loggedIn: true });
+    res.json({ loggedIn: true,userId:req.user });
   } else {
     res.json({ loggedIn: false });
   }
