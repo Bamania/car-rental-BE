@@ -6,7 +6,11 @@ import { authenticate } from "../middleware/authenticate";
 declare global {
   namespace Express {
     interface Request {
-      user?: number;
+      user?:{
+        userId:number
+        name:string
+        email:string
+      };
     }
   }
 }
@@ -29,7 +33,7 @@ router.get("/book/:userId", authenticate, async (req, res) => {
     }
 
     // Verify the authenticated user is requesting their own bookings
-    if (req.user !== userId) {
+    if (req.user.userId !== userId) {
       return res
         .status(403)
         .json({ error: "Access denied: Can only view your own bookings" });
@@ -62,53 +66,17 @@ router.post("/book", authenticate, async (req, res) => {
       return res.status(401).json({ error: "User not authenticated" });
     }
 
-    const userId = req.user;
+    
     const { pickupDate, dropoffDate, pickupLocation, totalPrice, carId } = req.body.formData;
 
-    // Check availability before creating booking
-    const availabilityErrors = await checkCarAvailability({
-      carId,
-      pickupDate,
-      dropoffDate
-    });
-
-    if (availabilityErrors.length > 0) {
-      return res.status(400).json({
-        error: "Booking validation failed",
-        errors: availabilityErrors
-      });
-    }
-
-    // Use transaction to prevent race conditions
-    const booking = await prisma.$transaction(async (tx) => {
-      // Double-check availability within transaction
-      const overlappingBookings = await tx.bookingInfo.findMany({
-        where: {
-          carId,
-          AND: [
-            {
-              pickupDate: {
-                lt: dropoffDate
-              }
-            },
-            {
-              dropoffDate: {
-                gt: pickupDate
-              }
-            }
-          ]
-        }
-      });
-
-      if (overlappingBookings.length > 0) {
-        throw new Error("Car was just booked by another user");
-      }
+    
+    
 
       // Create the booking
-      const newBooking = await tx.bookingInfo.create({
+      const newBooking = await prisma.bookingInfo.create({
         data: {
-          userId: userId,
-          carId,
+          userId: req?.user?.userId,
+          carId:parseInt(carId),
           pickupDate,
           dropoffDate,
           pickupLocation,
@@ -117,12 +85,14 @@ router.post("/book", authenticate, async (req, res) => {
         },
       });
 
-      return newBooking;
-    });
+      if (!newBooking || !newBooking.id) {
+        throw new Error("Booking creation failed");
+      }
+    
 
     res.status(201).json({ 
       message: "Booking created successfully", 
-      booking,
+     
       success: true 
     });
 

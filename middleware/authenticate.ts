@@ -18,7 +18,9 @@ export const authenticate = (req: any, res: any, next: any) => {
 
   try {
     const decoded = jwt.verify(authCookie, JWT_SECRET) as MyTokenPayload;
-    req.user = decoded.userId;
+    console.log("middleware verification ",decoded);
+    
+    req.user = decoded;
     next();
   } catch (err) {
     return res.status(401).json({ message: 'Invalid token.' });

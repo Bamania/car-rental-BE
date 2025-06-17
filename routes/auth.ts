@@ -44,7 +44,7 @@ router.post("/signup",async(req,res)=>{
 
         // Generate JWT token
         const token = jwt.sign(
-            { userId: newUser.id, email: newUser.email },
+            { userId: newUser.id, email: newUser.email,name:newUser.name },
             JWT_SECRET!,
             { expiresIn: '24h' }
         );
@@ -88,7 +88,7 @@ router.post("/login", async(req, res) => {
 
         // Generate JWT token
         const token = jwt.sign(
-            { userId: user.id, email: user.email },
+            { userId: user.id, email: user.email ,name:user.name },
             JWT_SECRET!,
             { expiresIn: '24h' }
         );
@@ -119,7 +119,7 @@ router.post("/logout", (req, res) => {
 router.get("/me", authenticate,(req, res) => {
   const token = req.cookies.authcookie;
   if (token) {
-    res.json({ loggedIn: true,userId:req.user });
+    res.json({ loggedIn: true,userId:req?.user?.userId ,userName:req?.user?.name,userEmail:req?.user?.email});
   } else {
     res.json({ loggedIn: false });
   }
