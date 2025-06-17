@@ -1,3 +1,0 @@
--- AlterTable
-ALTER TABLE "BookingInfo" ALTER COLUMN "pickupDate" SET DATA TYPE TEXT,
-ALTER COLUMN "dropoffDate" SET DATA TYPE TEXT;

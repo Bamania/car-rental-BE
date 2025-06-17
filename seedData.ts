@@ -2,7 +2,7 @@ import { prisma } from "./lib/db";
 
 import {Cardata} from "./mockdata/index"
 
-const length=Cardata.length;
+
 
 
 async function seedData() {
