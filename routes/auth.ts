@@ -49,7 +49,13 @@ router.post("/signup",async(req,res)=>{
             { expiresIn: '24h' }
         );
 
-    res.cookie('authcookie',token,{maxAge:900000,httpOnly:true}) 
+    res.cookie('authcookie',token,{
+      maxAge: 900000,
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production', // HTTPS only in production
+      sameSite: 'none', // Required for cross-domain
+      domain: process.env.NODE_ENV === 'production' ? undefined : undefined // Let browser handle domain
+    }) 
    res.status(200).json({
             message:"registered"
         })
@@ -86,14 +92,20 @@ router.post("/login", async(req, res) => {
             return res.status(401).json({ error: "Invalid email or password." });
         }
 
-        // Generate JWT token
+
         const token = jwt.sign(
             { userId: user.id, email: user.email ,name:user.name },
             JWT_SECRET!,
             { expiresIn: '24h' }
         );
 
-        res.cookie('authcookie',token,{maxAge:900000,httpOnly:true})
+        res.cookie('authcookie',token,{
+          maxAge: 900000,
+          httpOnly: true,
+          secure: process.env.NODE_ENV === 'production', // HTTPS only in production
+          sameSite: 'none', // Required for cross-domain
+          domain: process.env.NODE_ENV === 'production' ? undefined : undefined // Let browser handle domain
+        })
         res.status(200).json({
             message:"success"
         })
@@ -108,7 +120,11 @@ router.post("/login", async(req, res) => {
 
 
 router.post("/logout", (req, res) => {
-  res.clearCookie("auth");
+  res.clearCookie("authcookie", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'none'
+  });
   res.json({ message: "Logged out!" });
 });
 
