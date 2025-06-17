@@ -1,6 +1,6 @@
 # Car Rental Application
 
-A full-stack car rental platform built with modern web technologies, featuring user authentication, car browsing, booking management, and real-time availability checking.
+A full-stack car rental platform built with modern web technologies, featuring user authentication, car browsing, booking management.
 
 ##  Tech Stack
 
