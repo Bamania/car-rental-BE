@@ -2231,48 +2231,48 @@ export namespace Prisma {
   export type BookingInfoAvgAggregateOutputType = {
     id: number | null
     carId: number | null
-    userId: number | null
     totalPrice: number | null
+    userId: number | null
   }
 
   export type BookingInfoSumAggregateOutputType = {
     id: number | null
     carId: number | null
-    userId: number | null
     totalPrice: number | null
+    userId: number | null
   }
 
   export type BookingInfoMinAggregateOutputType = {
     id: number | null
     carId: number | null
-    userId: number | null
     pickupDate: string | null
     dropoffDate: string | null
     pickupLocation: string | null
     totalPrice: number | null
     createdAt: Date | null
+    userId: number | null
   }
 
   export type BookingInfoMaxAggregateOutputType = {
     id: number | null
     carId: number | null
-    userId: number | null
     pickupDate: string | null
     dropoffDate: string | null
     pickupLocation: string | null
     totalPrice: number | null
     createdAt: Date | null
+    userId: number | null
   }
 
   export type BookingInfoCountAggregateOutputType = {
     id: number
     carId: number
-    userId: number
     pickupDate: number
     dropoffDate: number
     pickupLocation: number
     totalPrice: number
     createdAt: number
+    userId: number
     _all: number
   }
 
@@ -2280,48 +2280,48 @@ export namespace Prisma {
   export type BookingInfoAvgAggregateInputType = {
     id?: true
     carId?: true
-    userId?: true
     totalPrice?: true
+    userId?: true
   }
 
   export type BookingInfoSumAggregateInputType = {
     id?: true
     carId?: true
-    userId?: true
     totalPrice?: true
+    userId?: true
   }
 
   export type BookingInfoMinAggregateInputType = {
     id?: true
     carId?: true
-    userId?: true
     pickupDate?: true
     dropoffDate?: true
     pickupLocation?: true
     totalPrice?: true
     createdAt?: true
+    userId?: true
   }
 
   export type BookingInfoMaxAggregateInputType = {
     id?: true
     carId?: true
-    userId?: true
     pickupDate?: true
     dropoffDate?: true
     pickupLocation?: true
     totalPrice?: true
     createdAt?: true
+    userId?: true
   }
 
   export type BookingInfoCountAggregateInputType = {
     id?: true
     carId?: true
-    userId?: true
     pickupDate?: true
     dropoffDate?: true
     pickupLocation?: true
     totalPrice?: true
     createdAt?: true
+    userId?: true
     _all?: true
   }
 
@@ -2414,12 +2414,12 @@ export namespace Prisma {
   export type BookingInfoGroupByOutputType = {
     id: number
     carId: number
-    userId: number
     pickupDate: string
     dropoffDate: string
     pickupLocation: string
     totalPrice: number
     createdAt: Date
+    userId: number
     _count: BookingInfoCountAggregateOutputType | null
     _avg: BookingInfoAvgAggregateOutputType | null
     _sum: BookingInfoSumAggregateOutputType | null
@@ -2444,82 +2444,82 @@ export namespace Prisma {
   export type BookingInfoSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     carId?: boolean
-    userId?: boolean
     pickupDate?: boolean
     dropoffDate?: boolean
     pickupLocation?: boolean
     totalPrice?: boolean
     createdAt?: boolean
-    user?: boolean | UserDefaultArgs<ExtArgs>
+    userId?: boolean
     car?: boolean | CarInfoDefaultArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["bookingInfo"]>
 
   export type BookingInfoSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     carId?: boolean
-    userId?: boolean
     pickupDate?: boolean
     dropoffDate?: boolean
     pickupLocation?: boolean
     totalPrice?: boolean
     createdAt?: boolean
-    user?: boolean | UserDefaultArgs<ExtArgs>
+    userId?: boolean
     car?: boolean | CarInfoDefaultArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["bookingInfo"]>
 
   export type BookingInfoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     carId?: boolean
-    userId?: boolean
     pickupDate?: boolean
     dropoffDate?: boolean
     pickupLocation?: boolean
     totalPrice?: boolean
     createdAt?: boolean
-    user?: boolean | UserDefaultArgs<ExtArgs>
+    userId?: boolean
     car?: boolean | CarInfoDefaultArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["bookingInfo"]>
 
   export type BookingInfoSelectScalar = {
     id?: boolean
     carId?: boolean
-    userId?: boolean
     pickupDate?: boolean
     dropoffDate?: boolean
     pickupLocation?: boolean
     totalPrice?: boolean
     createdAt?: boolean
+    userId?: boolean
   }
 
-  export type BookingInfoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "carId" | "userId" | "pickupDate" | "dropoffDate" | "pickupLocation" | "totalPrice" | "createdAt", ExtArgs["result"]["bookingInfo"]>
+  export type BookingInfoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "carId" | "pickupDate" | "dropoffDate" | "pickupLocation" | "totalPrice" | "createdAt" | "userId", ExtArgs["result"]["bookingInfo"]>
   export type BookingInfoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs>
     car?: boolean | CarInfoDefaultArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }
   export type BookingInfoIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs>
     car?: boolean | CarInfoDefaultArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }
   export type BookingInfoIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs>
     car?: boolean | CarInfoDefaultArgs<ExtArgs>
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }
 
   export type $BookingInfoPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "BookingInfo"
     objects: {
-      user: Prisma.$UserPayload<ExtArgs>
       car: Prisma.$CarInfoPayload<ExtArgs>
+      user: Prisma.$UserPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       carId: number
-      userId: number
       pickupDate: string
       dropoffDate: string
       pickupLocation: string
       totalPrice: number
       createdAt: Date
+      userId: number
     }, ExtArgs["result"]["bookingInfo"]>
     composites: {}
   }
@@ -2914,8 +2914,8 @@ export namespace Prisma {
    */
   export interface Prisma__BookingInfoClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     car<T extends CarInfoDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CarInfoDefaultArgs<ExtArgs>>): Prisma__CarInfoClient<$Result.GetResult<Prisma.$CarInfoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2947,12 +2947,12 @@ export namespace Prisma {
   interface BookingInfoFieldRefs {
     readonly id: FieldRef<"BookingInfo", 'Int'>
     readonly carId: FieldRef<"BookingInfo", 'Int'>
-    readonly userId: FieldRef<"BookingInfo", 'Int'>
     readonly pickupDate: FieldRef<"BookingInfo", 'String'>
     readonly dropoffDate: FieldRef<"BookingInfo", 'String'>
     readonly pickupLocation: FieldRef<"BookingInfo", 'String'>
     readonly totalPrice: FieldRef<"BookingInfo", 'Float'>
     readonly createdAt: FieldRef<"BookingInfo", 'DateTime'>
+    readonly userId: FieldRef<"BookingInfo", 'Int'>
   }
     
 
@@ -3399,9 +3399,9 @@ export namespace Prisma {
     type: string | null
     price_per_day: number | null
     rating: number | null
-    description: string | null
     fuel_type: string | null
     transmission: string | null
+    description: string | null
   }
 
   export type CarInfoMaxAggregateOutputType = {
@@ -3412,9 +3412,9 @@ export namespace Prisma {
     type: string | null
     price_per_day: number | null
     rating: number | null
-    description: string | null
     fuel_type: string | null
     transmission: string | null
+    description: string | null
   }
 
   export type CarInfoCountAggregateOutputType = {
@@ -3425,9 +3425,9 @@ export namespace Prisma {
     type: number
     price_per_day: number
     rating: number
-    description: number
     fuel_type: number
     transmission: number
+    description: number
     _all: number
   }
 
@@ -3452,9 +3452,9 @@ export namespace Prisma {
     type?: true
     price_per_day?: true
     rating?: true
-    description?: true
     fuel_type?: true
     transmission?: true
+    description?: true
   }
 
   export type CarInfoMaxAggregateInputType = {
@@ -3465,9 +3465,9 @@ export namespace Prisma {
     type?: true
     price_per_day?: true
     rating?: true
-    description?: true
     fuel_type?: true
     transmission?: true
+    description?: true
   }
 
   export type CarInfoCountAggregateInputType = {
@@ -3478,9 +3478,9 @@ export namespace Prisma {
     type?: true
     price_per_day?: true
     rating?: true
-    description?: true
     fuel_type?: true
     transmission?: true
+    description?: true
     _all?: true
   }
 
@@ -3578,9 +3578,9 @@ export namespace Prisma {
     type: string
     price_per_day: number
     rating: number
-    description: string
     fuel_type: string
     transmission: string
+    description: string
     _count: CarInfoCountAggregateOutputType | null
     _avg: CarInfoAvgAggregateOutputType | null
     _sum: CarInfoSumAggregateOutputType | null
@@ -3610,9 +3610,9 @@ export namespace Prisma {
     type?: boolean
     price_per_day?: boolean
     rating?: boolean
-    description?: boolean
     fuel_type?: boolean
     transmission?: boolean
+    description?: boolean
     bookings?: boolean | CarInfo$bookingsArgs<ExtArgs>
     _count?: boolean | CarInfoCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["carInfo"]>
@@ -3625,9 +3625,9 @@ export namespace Prisma {
     type?: boolean
     price_per_day?: boolean
     rating?: boolean
-    description?: boolean
     fuel_type?: boolean
     transmission?: boolean
+    description?: boolean
   }, ExtArgs["result"]["carInfo"]>
 
   export type CarInfoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -3638,9 +3638,9 @@ export namespace Prisma {
     type?: boolean
     price_per_day?: boolean
     rating?: boolean
-    description?: boolean
     fuel_type?: boolean
     transmission?: boolean
+    description?: boolean
   }, ExtArgs["result"]["carInfo"]>
 
   export type CarInfoSelectScalar = {
@@ -3651,12 +3651,12 @@ export namespace Prisma {
     type?: boolean
     price_per_day?: boolean
     rating?: boolean
-    description?: boolean
     fuel_type?: boolean
     transmission?: boolean
+    description?: boolean
   }
 
-  export type CarInfoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "brand" | "image" | "type" | "price_per_day" | "rating" | "description" | "fuel_type" | "transmission", ExtArgs["result"]["carInfo"]>
+  export type CarInfoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "brand" | "image" | "type" | "price_per_day" | "rating" | "fuel_type" | "transmission" | "description", ExtArgs["result"]["carInfo"]>
   export type CarInfoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     bookings?: boolean | CarInfo$bookingsArgs<ExtArgs>
     _count?: boolean | CarInfoCountOutputTypeDefaultArgs<ExtArgs>
@@ -3677,9 +3677,9 @@ export namespace Prisma {
       type: string
       price_per_day: number
       rating: number
-      description: string
       fuel_type: string
       transmission: string
+      description: string
     }, ExtArgs["result"]["carInfo"]>
     composites: {}
   }
@@ -4111,9 +4111,9 @@ export namespace Prisma {
     readonly type: FieldRef<"CarInfo", 'String'>
     readonly price_per_day: FieldRef<"CarInfo", 'Float'>
     readonly rating: FieldRef<"CarInfo", 'Float'>
-    readonly description: FieldRef<"CarInfo", 'String'>
     readonly fuel_type: FieldRef<"CarInfo", 'String'>
     readonly transmission: FieldRef<"CarInfo", 'String'>
+    readonly description: FieldRef<"CarInfo", 'String'>
   }
     
 
@@ -4572,12 +4572,12 @@ export namespace Prisma {
   export const BookingInfoScalarFieldEnum: {
     id: 'id',
     carId: 'carId',
-    userId: 'userId',
     pickupDate: 'pickupDate',
     dropoffDate: 'dropoffDate',
     pickupLocation: 'pickupLocation',
     totalPrice: 'totalPrice',
-    createdAt: 'createdAt'
+    createdAt: 'createdAt',
+    userId: 'userId'
   };
 
   export type BookingInfoScalarFieldEnum = (typeof BookingInfoScalarFieldEnum)[keyof typeof BookingInfoScalarFieldEnum]
@@ -4591,9 +4591,9 @@ export namespace Prisma {
     type: 'type',
     price_per_day: 'price_per_day',
     rating: 'rating',
-    description: 'description',
     fuel_type: 'fuel_type',
-    transmission: 'transmission'
+    transmission: 'transmission',
+    description: 'description'
   };
 
   export type CarInfoScalarFieldEnum = (typeof CarInfoScalarFieldEnum)[keyof typeof CarInfoScalarFieldEnum]
@@ -4742,27 +4742,27 @@ export namespace Prisma {
     NOT?: BookingInfoWhereInput | BookingInfoWhereInput[]
     id?: IntFilter<"BookingInfo"> | number
     carId?: IntFilter<"BookingInfo"> | number
-    userId?: IntFilter<"BookingInfo"> | number
     pickupDate?: StringFilter<"BookingInfo"> | string
     dropoffDate?: StringFilter<"BookingInfo"> | string
     pickupLocation?: StringFilter<"BookingInfo"> | string
     totalPrice?: FloatFilter<"BookingInfo"> | number
     createdAt?: DateTimeFilter<"BookingInfo"> | Date | string
-    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    userId?: IntFilter<"BookingInfo"> | number
     car?: XOR<CarInfoScalarRelationFilter, CarInfoWhereInput>
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }
 
   export type BookingInfoOrderByWithRelationInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     pickupDate?: SortOrder
     dropoffDate?: SortOrder
     pickupLocation?: SortOrder
     totalPrice?: SortOrder
     createdAt?: SortOrder
-    user?: UserOrderByWithRelationInput
+    userId?: SortOrder
     car?: CarInfoOrderByWithRelationInput
+    user?: UserOrderByWithRelationInput
   }
 
   export type BookingInfoWhereUniqueInput = Prisma.AtLeast<{
@@ -4771,25 +4771,25 @@ export namespace Prisma {
     OR?: BookingInfoWhereInput[]
     NOT?: BookingInfoWhereInput | BookingInfoWhereInput[]
     carId?: IntFilter<"BookingInfo"> | number
-    userId?: IntFilter<"BookingInfo"> | number
     pickupDate?: StringFilter<"BookingInfo"> | string
     dropoffDate?: StringFilter<"BookingInfo"> | string
     pickupLocation?: StringFilter<"BookingInfo"> | string
     totalPrice?: FloatFilter<"BookingInfo"> | number
     createdAt?: DateTimeFilter<"BookingInfo"> | Date | string
-    user?: XOR<UserScalarRelationFilter, UserWhereInput>
+    userId?: IntFilter<"BookingInfo"> | number
     car?: XOR<CarInfoScalarRelationFilter, CarInfoWhereInput>
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }, "id">
 
   export type BookingInfoOrderByWithAggregationInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     pickupDate?: SortOrder
     dropoffDate?: SortOrder
     pickupLocation?: SortOrder
     totalPrice?: SortOrder
     createdAt?: SortOrder
+    userId?: SortOrder
     _count?: BookingInfoCountOrderByAggregateInput
     _avg?: BookingInfoAvgOrderByAggregateInput
     _max?: BookingInfoMaxOrderByAggregateInput
@@ -4803,12 +4803,12 @@ export namespace Prisma {
     NOT?: BookingInfoScalarWhereWithAggregatesInput | BookingInfoScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"BookingInfo"> | number
     carId?: IntWithAggregatesFilter<"BookingInfo"> | number
-    userId?: IntWithAggregatesFilter<"BookingInfo"> | number
     pickupDate?: StringWithAggregatesFilter<"BookingInfo"> | string
     dropoffDate?: StringWithAggregatesFilter<"BookingInfo"> | string
     pickupLocation?: StringWithAggregatesFilter<"BookingInfo"> | string
     totalPrice?: FloatWithAggregatesFilter<"BookingInfo"> | number
     createdAt?: DateTimeWithAggregatesFilter<"BookingInfo"> | Date | string
+    userId?: IntWithAggregatesFilter<"BookingInfo"> | number
   }
 
   export type CarInfoWhereInput = {
@@ -4822,9 +4822,9 @@ export namespace Prisma {
     type?: StringFilter<"CarInfo"> | string
     price_per_day?: FloatFilter<"CarInfo"> | number
     rating?: FloatFilter<"CarInfo"> | number
-    description?: StringFilter<"CarInfo"> | string
     fuel_type?: StringFilter<"CarInfo"> | string
     transmission?: StringFilter<"CarInfo"> | string
+    description?: StringFilter<"CarInfo"> | string
     bookings?: BookingInfoListRelationFilter
   }
 
@@ -4836,9 +4836,9 @@ export namespace Prisma {
     type?: SortOrder
     price_per_day?: SortOrder
     rating?: SortOrder
-    description?: SortOrder
     fuel_type?: SortOrder
     transmission?: SortOrder
+    description?: SortOrder
     bookings?: BookingInfoOrderByRelationAggregateInput
   }
 
@@ -4853,9 +4853,9 @@ export namespace Prisma {
     type?: StringFilter<"CarInfo"> | string
     price_per_day?: FloatFilter<"CarInfo"> | number
     rating?: FloatFilter<"CarInfo"> | number
-    description?: StringFilter<"CarInfo"> | string
     fuel_type?: StringFilter<"CarInfo"> | string
     transmission?: StringFilter<"CarInfo"> | string
+    description?: StringFilter<"CarInfo"> | string
     bookings?: BookingInfoListRelationFilter
   }, "id">
 
@@ -4867,9 +4867,9 @@ export namespace Prisma {
     type?: SortOrder
     price_per_day?: SortOrder
     rating?: SortOrder
-    description?: SortOrder
     fuel_type?: SortOrder
     transmission?: SortOrder
+    description?: SortOrder
     _count?: CarInfoCountOrderByAggregateInput
     _avg?: CarInfoAvgOrderByAggregateInput
     _max?: CarInfoMaxOrderByAggregateInput
@@ -4888,9 +4888,9 @@ export namespace Prisma {
     type?: StringWithAggregatesFilter<"CarInfo"> | string
     price_per_day?: FloatWithAggregatesFilter<"CarInfo"> | number
     rating?: FloatWithAggregatesFilter<"CarInfo"> | number
-    description?: StringWithAggregatesFilter<"CarInfo"> | string
     fuel_type?: StringWithAggregatesFilter<"CarInfo"> | string
     transmission?: StringWithAggregatesFilter<"CarInfo"> | string
+    description?: StringWithAggregatesFilter<"CarInfo"> | string
   }
 
   export type UserCreateInput = {
@@ -4956,19 +4956,19 @@ export namespace Prisma {
     pickupLocation: string
     totalPrice: number
     createdAt?: Date | string
-    user: UserCreateNestedOneWithoutBookingsInput
     car: CarInfoCreateNestedOneWithoutBookingsInput
+    user: UserCreateNestedOneWithoutBookingsInput
   }
 
   export type BookingInfoUncheckedCreateInput = {
     id?: number
     carId: number
-    userId: number
     pickupDate: string
     dropoffDate: string
     pickupLocation: string
     totalPrice: number
     createdAt?: Date | string
+    userId: number
   }
 
   export type BookingInfoUpdateInput = {
@@ -4977,30 +4977,30 @@ export namespace Prisma {
     pickupLocation?: StringFieldUpdateOperationsInput | string
     totalPrice?: FloatFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    user?: UserUpdateOneRequiredWithoutBookingsNestedInput
     car?: CarInfoUpdateOneRequiredWithoutBookingsNestedInput
+    user?: UserUpdateOneRequiredWithoutBookingsNestedInput
   }
 
   export type BookingInfoUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     carId?: IntFieldUpdateOperationsInput | number
-    userId?: IntFieldUpdateOperationsInput | number
     pickupDate?: StringFieldUpdateOperationsInput | string
     dropoffDate?: StringFieldUpdateOperationsInput | string
     pickupLocation?: StringFieldUpdateOperationsInput | string
     totalPrice?: FloatFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
   export type BookingInfoCreateManyInput = {
     id?: number
     carId: number
-    userId: number
     pickupDate: string
     dropoffDate: string
     pickupLocation: string
     totalPrice: number
     createdAt?: Date | string
+    userId: number
   }
 
   export type BookingInfoUpdateManyMutationInput = {
@@ -5014,12 +5014,12 @@ export namespace Prisma {
   export type BookingInfoUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     carId?: IntFieldUpdateOperationsInput | number
-    userId?: IntFieldUpdateOperationsInput | number
     pickupDate?: StringFieldUpdateOperationsInput | string
     dropoffDate?: StringFieldUpdateOperationsInput | string
     pickupLocation?: StringFieldUpdateOperationsInput | string
     totalPrice?: FloatFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
   export type CarInfoCreateInput = {
@@ -5029,9 +5029,9 @@ export namespace Prisma {
     type: string
     price_per_day: number
     rating: number
-    description?: string
     fuel_type: string
     transmission: string
+    description?: string
     bookings?: BookingInfoCreateNestedManyWithoutCarInput
   }
 
@@ -5043,9 +5043,9 @@ export namespace Prisma {
     type: string
     price_per_day: number
     rating: number
-    description?: string
     fuel_type: string
     transmission: string
+    description?: string
     bookings?: BookingInfoUncheckedCreateNestedManyWithoutCarInput
   }
 
@@ -5056,9 +5056,9 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     price_per_day?: FloatFieldUpdateOperationsInput | number
     rating?: FloatFieldUpdateOperationsInput | number
-    description?: StringFieldUpdateOperationsInput | string
     fuel_type?: StringFieldUpdateOperationsInput | string
     transmission?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     bookings?: BookingInfoUpdateManyWithoutCarNestedInput
   }
 
@@ -5070,9 +5070,9 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     price_per_day?: FloatFieldUpdateOperationsInput | number
     rating?: FloatFieldUpdateOperationsInput | number
-    description?: StringFieldUpdateOperationsInput | string
     fuel_type?: StringFieldUpdateOperationsInput | string
     transmission?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
     bookings?: BookingInfoUncheckedUpdateManyWithoutCarNestedInput
   }
 
@@ -5084,9 +5084,9 @@ export namespace Prisma {
     type: string
     price_per_day: number
     rating: number
-    description?: string
     fuel_type: string
     transmission: string
+    description?: string
   }
 
   export type CarInfoUpdateManyMutationInput = {
@@ -5096,9 +5096,9 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     price_per_day?: FloatFieldUpdateOperationsInput | number
     rating?: FloatFieldUpdateOperationsInput | number
-    description?: StringFieldUpdateOperationsInput | string
     fuel_type?: StringFieldUpdateOperationsInput | string
     transmission?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
   }
 
   export type CarInfoUncheckedUpdateManyInput = {
@@ -5109,9 +5109,9 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     price_per_day?: FloatFieldUpdateOperationsInput | number
     rating?: FloatFieldUpdateOperationsInput | number
-    description?: StringFieldUpdateOperationsInput | string
     fuel_type?: StringFieldUpdateOperationsInput | string
     transmission?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -5238,61 +5238,61 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type UserScalarRelationFilter = {
-    is?: UserWhereInput
-    isNot?: UserWhereInput
-  }
-
   export type CarInfoScalarRelationFilter = {
     is?: CarInfoWhereInput
     isNot?: CarInfoWhereInput
   }
 
+  export type UserScalarRelationFilter = {
+    is?: UserWhereInput
+    isNot?: UserWhereInput
+  }
+
   export type BookingInfoCountOrderByAggregateInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     pickupDate?: SortOrder
     dropoffDate?: SortOrder
     pickupLocation?: SortOrder
     totalPrice?: SortOrder
     createdAt?: SortOrder
+    userId?: SortOrder
   }
 
   export type BookingInfoAvgOrderByAggregateInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     totalPrice?: SortOrder
+    userId?: SortOrder
   }
 
   export type BookingInfoMaxOrderByAggregateInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     pickupDate?: SortOrder
     dropoffDate?: SortOrder
     pickupLocation?: SortOrder
     totalPrice?: SortOrder
     createdAt?: SortOrder
+    userId?: SortOrder
   }
 
   export type BookingInfoMinOrderByAggregateInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     pickupDate?: SortOrder
     dropoffDate?: SortOrder
     pickupLocation?: SortOrder
     totalPrice?: SortOrder
     createdAt?: SortOrder
+    userId?: SortOrder
   }
 
   export type BookingInfoSumOrderByAggregateInput = {
     id?: SortOrder
     carId?: SortOrder
-    userId?: SortOrder
     totalPrice?: SortOrder
+    userId?: SortOrder
   }
 
   export type FloatWithAggregatesFilter<$PrismaModel = never> = {
@@ -5333,9 +5333,9 @@ export namespace Prisma {
     type?: SortOrder
     price_per_day?: SortOrder
     rating?: SortOrder
-    description?: SortOrder
     fuel_type?: SortOrder
     transmission?: SortOrder
+    description?: SortOrder
   }
 
   export type CarInfoAvgOrderByAggregateInput = {
@@ -5352,9 +5352,9 @@ export namespace Prisma {
     type?: SortOrder
     price_per_day?: SortOrder
     rating?: SortOrder
-    description?: SortOrder
     fuel_type?: SortOrder
     transmission?: SortOrder
+    description?: SortOrder
   }
 
   export type CarInfoMinOrderByAggregateInput = {
@@ -5365,9 +5365,9 @@ export namespace Prisma {
     type?: SortOrder
     price_per_day?: SortOrder
     rating?: SortOrder
-    description?: SortOrder
     fuel_type?: SortOrder
     transmission?: SortOrder
+    description?: SortOrder
   }
 
   export type CarInfoSumOrderByAggregateInput = {
@@ -5430,16 +5430,16 @@ export namespace Prisma {
     deleteMany?: BookingInfoScalarWhereInput | BookingInfoScalarWhereInput[]
   }
 
-  export type UserCreateNestedOneWithoutBookingsInput = {
-    create?: XOR<UserCreateWithoutBookingsInput, UserUncheckedCreateWithoutBookingsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutBookingsInput
-    connect?: UserWhereUniqueInput
-  }
-
   export type CarInfoCreateNestedOneWithoutBookingsInput = {
     create?: XOR<CarInfoCreateWithoutBookingsInput, CarInfoUncheckedCreateWithoutBookingsInput>
     connectOrCreate?: CarInfoCreateOrConnectWithoutBookingsInput
     connect?: CarInfoWhereUniqueInput
+  }
+
+  export type UserCreateNestedOneWithoutBookingsInput = {
+    create?: XOR<UserCreateWithoutBookingsInput, UserUncheckedCreateWithoutBookingsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutBookingsInput
+    connect?: UserWhereUniqueInput
   }
 
   export type FloatFieldUpdateOperationsInput = {
@@ -5454,20 +5454,20 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type UserUpdateOneRequiredWithoutBookingsNestedInput = {
-    create?: XOR<UserCreateWithoutBookingsInput, UserUncheckedCreateWithoutBookingsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutBookingsInput
-    upsert?: UserUpsertWithoutBookingsInput
-    connect?: UserWhereUniqueInput
-    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutBookingsInput, UserUpdateWithoutBookingsInput>, UserUncheckedUpdateWithoutBookingsInput>
-  }
-
   export type CarInfoUpdateOneRequiredWithoutBookingsNestedInput = {
     create?: XOR<CarInfoCreateWithoutBookingsInput, CarInfoUncheckedCreateWithoutBookingsInput>
     connectOrCreate?: CarInfoCreateOrConnectWithoutBookingsInput
     upsert?: CarInfoUpsertWithoutBookingsInput
     connect?: CarInfoWhereUniqueInput
     update?: XOR<XOR<CarInfoUpdateToOneWithWhereWithoutBookingsInput, CarInfoUpdateWithoutBookingsInput>, CarInfoUncheckedUpdateWithoutBookingsInput>
+  }
+
+  export type UserUpdateOneRequiredWithoutBookingsNestedInput = {
+    create?: XOR<UserCreateWithoutBookingsInput, UserUncheckedCreateWithoutBookingsInput>
+    connectOrCreate?: UserCreateOrConnectWithoutBookingsInput
+    upsert?: UserUpsertWithoutBookingsInput
+    connect?: UserWhereUniqueInput
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutBookingsInput, UserUpdateWithoutBookingsInput>, UserUncheckedUpdateWithoutBookingsInput>
   }
 
   export type BookingInfoCreateNestedManyWithoutCarInput = {
@@ -5673,12 +5673,42 @@ export namespace Prisma {
     NOT?: BookingInfoScalarWhereInput | BookingInfoScalarWhereInput[]
     id?: IntFilter<"BookingInfo"> | number
     carId?: IntFilter<"BookingInfo"> | number
-    userId?: IntFilter<"BookingInfo"> | number
     pickupDate?: StringFilter<"BookingInfo"> | string
     dropoffDate?: StringFilter<"BookingInfo"> | string
     pickupLocation?: StringFilter<"BookingInfo"> | string
     totalPrice?: FloatFilter<"BookingInfo"> | number
     createdAt?: DateTimeFilter<"BookingInfo"> | Date | string
+    userId?: IntFilter<"BookingInfo"> | number
+  }
+
+  export type CarInfoCreateWithoutBookingsInput = {
+    name: string
+    brand: string
+    image: string
+    type: string
+    price_per_day: number
+    rating: number
+    fuel_type: string
+    transmission: string
+    description?: string
+  }
+
+  export type CarInfoUncheckedCreateWithoutBookingsInput = {
+    id?: number
+    name: string
+    brand: string
+    image: string
+    type: string
+    price_per_day: number
+    rating: number
+    fuel_type: string
+    transmission: string
+    description?: string
+  }
+
+  export type CarInfoCreateOrConnectWithoutBookingsInput = {
+    where: CarInfoWhereUniqueInput
+    create: XOR<CarInfoCreateWithoutBookingsInput, CarInfoUncheckedCreateWithoutBookingsInput>
   }
 
   export type UserCreateWithoutBookingsInput = {
@@ -5701,34 +5731,40 @@ export namespace Prisma {
     create: XOR<UserCreateWithoutBookingsInput, UserUncheckedCreateWithoutBookingsInput>
   }
 
-  export type CarInfoCreateWithoutBookingsInput = {
-    name: string
-    brand: string
-    image: string
-    type: string
-    price_per_day: number
-    rating: number
-    description?: string
-    fuel_type: string
-    transmission: string
-  }
-
-  export type CarInfoUncheckedCreateWithoutBookingsInput = {
-    id?: number
-    name: string
-    brand: string
-    image: string
-    type: string
-    price_per_day: number
-    rating: number
-    description?: string
-    fuel_type: string
-    transmission: string
-  }
-
-  export type CarInfoCreateOrConnectWithoutBookingsInput = {
-    where: CarInfoWhereUniqueInput
+  export type CarInfoUpsertWithoutBookingsInput = {
+    update: XOR<CarInfoUpdateWithoutBookingsInput, CarInfoUncheckedUpdateWithoutBookingsInput>
     create: XOR<CarInfoCreateWithoutBookingsInput, CarInfoUncheckedCreateWithoutBookingsInput>
+    where?: CarInfoWhereInput
+  }
+
+  export type CarInfoUpdateToOneWithWhereWithoutBookingsInput = {
+    where?: CarInfoWhereInput
+    data: XOR<CarInfoUpdateWithoutBookingsInput, CarInfoUncheckedUpdateWithoutBookingsInput>
+  }
+
+  export type CarInfoUpdateWithoutBookingsInput = {
+    name?: StringFieldUpdateOperationsInput | string
+    brand?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    price_per_day?: FloatFieldUpdateOperationsInput | number
+    rating?: FloatFieldUpdateOperationsInput | number
+    fuel_type?: StringFieldUpdateOperationsInput | string
+    transmission?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type CarInfoUncheckedUpdateWithoutBookingsInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    name?: StringFieldUpdateOperationsInput | string
+    brand?: StringFieldUpdateOperationsInput | string
+    image?: StringFieldUpdateOperationsInput | string
+    type?: StringFieldUpdateOperationsInput | string
+    price_per_day?: FloatFieldUpdateOperationsInput | number
+    rating?: FloatFieldUpdateOperationsInput | number
+    fuel_type?: StringFieldUpdateOperationsInput | string
+    transmission?: StringFieldUpdateOperationsInput | string
+    description?: StringFieldUpdateOperationsInput | string
   }
 
   export type UserUpsertWithoutBookingsInput = {
@@ -5757,42 +5793,6 @@ export namespace Prisma {
     phoneNumber?: StringFieldUpdateOperationsInput | string
   }
 
-  export type CarInfoUpsertWithoutBookingsInput = {
-    update: XOR<CarInfoUpdateWithoutBookingsInput, CarInfoUncheckedUpdateWithoutBookingsInput>
-    create: XOR<CarInfoCreateWithoutBookingsInput, CarInfoUncheckedCreateWithoutBookingsInput>
-    where?: CarInfoWhereInput
-  }
-
-  export type CarInfoUpdateToOneWithWhereWithoutBookingsInput = {
-    where?: CarInfoWhereInput
-    data: XOR<CarInfoUpdateWithoutBookingsInput, CarInfoUncheckedUpdateWithoutBookingsInput>
-  }
-
-  export type CarInfoUpdateWithoutBookingsInput = {
-    name?: StringFieldUpdateOperationsInput | string
-    brand?: StringFieldUpdateOperationsInput | string
-    image?: StringFieldUpdateOperationsInput | string
-    type?: StringFieldUpdateOperationsInput | string
-    price_per_day?: FloatFieldUpdateOperationsInput | number
-    rating?: FloatFieldUpdateOperationsInput | number
-    description?: StringFieldUpdateOperationsInput | string
-    fuel_type?: StringFieldUpdateOperationsInput | string
-    transmission?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type CarInfoUncheckedUpdateWithoutBookingsInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
-    brand?: StringFieldUpdateOperationsInput | string
-    image?: StringFieldUpdateOperationsInput | string
-    type?: StringFieldUpdateOperationsInput | string
-    price_per_day?: FloatFieldUpdateOperationsInput | number
-    rating?: FloatFieldUpdateOperationsInput | number
-    description?: StringFieldUpdateOperationsInput | string
-    fuel_type?: StringFieldUpdateOperationsInput | string
-    transmission?: StringFieldUpdateOperationsInput | string
-  }
-
   export type BookingInfoCreateWithoutCarInput = {
     pickupDate: string
     dropoffDate: string
@@ -5804,12 +5804,12 @@ export namespace Prisma {
 
   export type BookingInfoUncheckedCreateWithoutCarInput = {
     id?: number
-    userId: number
     pickupDate: string
     dropoffDate: string
     pickupLocation: string
     totalPrice: number
     createdAt?: Date | string
+    userId: number
   }
 
   export type BookingInfoCreateOrConnectWithoutCarInput = {
@@ -5879,12 +5879,12 @@ export namespace Prisma {
 
   export type BookingInfoCreateManyCarInput = {
     id?: number
-    userId: number
     pickupDate: string
     dropoffDate: string
     pickupLocation: string
     totalPrice: number
     createdAt?: Date | string
+    userId: number
   }
 
   export type BookingInfoUpdateWithoutCarInput = {
@@ -5898,22 +5898,22 @@ export namespace Prisma {
 
   export type BookingInfoUncheckedUpdateWithoutCarInput = {
     id?: IntFieldUpdateOperationsInput | number
-    userId?: IntFieldUpdateOperationsInput | number
     pickupDate?: StringFieldUpdateOperationsInput | string
     dropoffDate?: StringFieldUpdateOperationsInput | string
     pickupLocation?: StringFieldUpdateOperationsInput | string
     totalPrice?: FloatFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
   export type BookingInfoUncheckedUpdateManyWithoutCarInput = {
     id?: IntFieldUpdateOperationsInput | number
-    userId?: IntFieldUpdateOperationsInput | number
     pickupDate?: StringFieldUpdateOperationsInput | string
     dropoffDate?: StringFieldUpdateOperationsInput | string
     pickupLocation?: StringFieldUpdateOperationsInput | string
     totalPrice?: FloatFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
 

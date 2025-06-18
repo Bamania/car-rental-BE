@@ -103,7 +103,7 @@ router.post("/login", async(req, res) => {
           maxAge: 900000,
           httpOnly: true,
           secure: process.env.NODE_ENV === 'production', // HTTPS only in production
-          sameSite: 'none', // Required for cross-domain
+          sameSite: 'none', 
           domain: process.env.NODE_ENV === 'production' ? undefined : undefined // Let browser handle domain
         })
         res.status(200).json({

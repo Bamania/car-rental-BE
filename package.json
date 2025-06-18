@@ -11,7 +11,8 @@
     "postinstall": "prisma generate",
     "postbuild": "cp -r generated dist/generated",
     "start": "node dist/index.js",
-    "seed": "tsx seedData.ts"
+    "seed": "tsx seedData.ts",
+    "db:deploy": "npx prisma migrate deploy && npx prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -35,6 +36,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^4.17.23",
     "prisma": "^6.6.0",
-    "tsx": "^4.20.3"
+    "tsx": "^4.20.3",
+    "typescript": "^5.0.0"
   }
 }

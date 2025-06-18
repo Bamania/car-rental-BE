@@ -128,12 +128,12 @@ exports.Prisma.UserScalarFieldEnum = {
 exports.Prisma.BookingInfoScalarFieldEnum = {
   id: 'id',
   carId: 'carId',
-  userId: 'userId',
   pickupDate: 'pickupDate',
   dropoffDate: 'dropoffDate',
   pickupLocation: 'pickupLocation',
   totalPrice: 'totalPrice',
-  createdAt: 'createdAt'
+  createdAt: 'createdAt',
+  userId: 'userId'
 };
 
 exports.Prisma.CarInfoScalarFieldEnum = {
@@ -144,9 +144,9 @@ exports.Prisma.CarInfoScalarFieldEnum = {
   type: 'type',
   price_per_day: 'price_per_day',
   rating: 'rating',
-  description: 'description',
   fuel_type: 'fuel_type',
-  transmission: 'transmission'
+  transmission: 'transmission',
+  description: 'description'
 };
 
 exports.Prisma.SortOrder = {

@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma"
@@ -25,17 +19,16 @@ model User {
 }
 
 model BookingInfo {
-  id             Int     @id @default(autoincrement())
+  id             Int      @id @default(autoincrement())
   carId          Int
-  userId         Int
-  user           User    @relation(fields: [userId], references: [id])
-  car            CarInfo @relation(fields: [carId], references: [id])
   pickupDate     String
   dropoffDate    String
   pickupLocation String
-
-  totalPrice Float
-  createdAt  DateTime @default(now())
+  totalPrice     Float
+  createdAt      DateTime @default(now())
+  userId         Int
+  car            CarInfo  @relation(fields: [carId], references: [id])
+  user           User     @relation(fields: [userId], references: [id])
 }
 
 model CarInfo {
@@ -46,8 +39,8 @@ model CarInfo {
   type          String
   price_per_day Float
   rating        Float
-  description   String        @default("no description available ")
   fuel_type     String
   transmission  String
+  description   String        @default("no description available ")
   bookings      BookingInfo[]
 }
